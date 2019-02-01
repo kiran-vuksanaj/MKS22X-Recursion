@@ -5,6 +5,7 @@ public class recursion{
   public static void main(String[] args){
     System.out.println("\t///SQRT");
     System.out.println("sqrt(10) = "+sqrt(10,0.0001));
+    System.out.println("sqrt(10)[low precision] = "+sqrt(10,100));
     System.out.println("sqrt(100) = "+sqrt(100,0.0001));
     System.out.println("sqrt(0) = "+sqrt(0,0.0001));
     System.out.println("sqrt(0.0001) = "+sqrt(0.0001,0.0001));
@@ -40,9 +41,11 @@ public class recursion{
    *precondition: n is non-negative
    */
   public static int fib(int n){
+    return fibStoredVals(n,1,0,1);
+  }
+  private static int fibStoredVals(int endInd,int prevVal,int curVal,int curInd){
     return 0;
   }
-
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(){
     return null;
