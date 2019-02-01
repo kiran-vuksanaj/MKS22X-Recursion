@@ -68,8 +68,10 @@ public class recursion{
   }
   private static void makeSumsRecurs(int n,int total,ArrayList<Integer> out){
     if(n==0){
+      //when the method has traced down to the bottom of the tree; return total accumulated over each step
       out.add(total);
     }else{
+      //two method calls, each with n-1 to step down in the tree, and one increasing the total by n(those including n) and the other not changing the total
       makeSumsRecurs(n-1,total+n,out);
       makeSumsRecurs(n-1,total  ,out);
     }
