@@ -9,7 +9,10 @@ public class recursion{
 
   */
   public static double sqrt(double n, double tolerance){
-    return 0.0;
+    return sqrtGuess(n,tolerance,1);
+  }
+  private static double sqrtGuess(double n,double tol,double g){
+    return 0;
   }
 
   /*Recursively find the n'th fibbonaci number in linear time
