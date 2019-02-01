@@ -16,6 +16,12 @@ public class recursion{
     System.out.println("fib(3) = "+fib(3));
     System.out.println("fib(10) = "+fib(10));
     System.out.println("fib(45) = "+fib(45));
+    System.out.println("\t///MAKEALLSUMS");
+    System.out.println("MAS(0): "+makeAllSums(0));
+    System.out.println("MAS(1): "+makeAllSums(1));
+    System.out.println("MAS(2): "+makeAllSums(2));
+    System.out.println("MAS(3): "+makeAllSums(3));
+    System.out.println("MAS(7): "+makeAllSums(7));
   }
   /*Recursively find the sqrt using Newton's approximation
    *tolerance is the allowed percent error the squared answer is away from n.
