@@ -14,9 +14,12 @@ public class recursion{
   }
   private static double sqrtGuess(double n,double tol,double guess){
     if(percentError(n,guess) < tol){
+      //guess is good enough, exit recursive loop
       return guess;
     }else{
-      return 0;
+      //guess is still too far off, new recursive call with recalculated guess
+      double newGuess = (n / guess + guess) / 2;
+      return sqrtGuess(n,tol,newGuess);
     }
   }
   private static double percentError(double actual,double experimental){
