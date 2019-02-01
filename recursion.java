@@ -9,9 +9,17 @@ public class recursion{
 
   */
   public static double sqrt(double n, double tolerance){
+    //helper method with an extra parameter, a guess that is continuously refined
     return sqrtGuess(n,tolerance,1);
   }
-  private static double sqrtGuess(double n,double tol,double g){
+  private static double sqrtGuess(double n,double tol,double guess){
+    if(percentError(n,guess) < tol){
+      return guess;
+    }else{
+      return 0;
+    }
+  }
+  private static double percentError(double actual,double experimental){
     return 0;
   }
 
