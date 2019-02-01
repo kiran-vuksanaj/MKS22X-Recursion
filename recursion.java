@@ -67,6 +67,8 @@ public class recursion{
     return out;
   }
   private static void makeSumsRecurs(int n,int total,ArrayList<Integer> out){
-    
+    if(n==0){
+      out.add(total);
+    }
   }
 }
