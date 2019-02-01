@@ -61,7 +61,12 @@ public class recursion{
     }
   }
   /*As Per classwork*/
-  public static ArrayList<Integer> makeAllSums(){
-    return null;
+  public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> out = new ArrayList<Integer>();
+    makeSumsRecurs(n,0,out);
+    return out;
+  }
+  private static void makeSumsRecurs(int n,int total,ArrayList<Integer> out){
+    
   }
 }
