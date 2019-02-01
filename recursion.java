@@ -6,7 +6,7 @@ public class recursion{
     System.out.println("\t///SQRT");
     System.out.println("sqrt(10) = "+sqrt(10,0.0001));
     System.out.println("sqrt(100) = "+sqrt(100,0.0001));
-    //System.out.println("sqrt(0) = "+sqrt(0,0.0001));
+    System.out.println("sqrt(0) = "+sqrt(0,0.0001));
     System.out.println("sqrt(0.0001) = "+sqrt(0.0001,0.0001));
   }
   /*Recursively find the sqrt using Newton's approximation
@@ -16,6 +16,7 @@ public class recursion{
   */
   public static double sqrt(double n, double tolerance){
     //helper method with an extra parameter, a guess that is continuously refined
+    if(n==0) return 0; //special case to avoid division by zero
     return sqrtGuess(n,tolerance,1);
   }
   private static double sqrtGuess(double n,double tol,double guess){
