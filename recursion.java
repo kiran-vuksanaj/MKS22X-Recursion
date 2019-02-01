@@ -20,7 +20,7 @@ public class recursion{
     }
   }
   private static double percentError(double actual,double experimental){
-    return 0;
+    return Math.abs((experimental - actual) / actual) * 100;
   }
 
   /*Recursively find the n'th fibbonaci number in linear time
