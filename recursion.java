@@ -44,7 +44,14 @@ public class recursion{
     return fibStoredVals(n,1,0,1);
   }
   private static int fibStoredVals(int endInd,int prevVal,int curVal,int curInd){
-    return 0;
+    if(curInd == endInd){
+      //when proper term has been generated, exit recursive loop
+      return curVal;
+    }else{
+      //otherwise, generate the new term and call the method again with new as current, current as previous, and incremented index
+      int newVal = prevVal + curVal;
+      return fibStoredVals(endInd,curVal,newVal,curInd+1);
+    }
   }
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(){
