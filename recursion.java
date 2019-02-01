@@ -2,7 +2,13 @@ import java.util.ArrayList;
 
 public class recursion{
   /*You may write additional private methods */
-
+  public static void main(String[] args){
+    System.out.println("\t///SQRT");
+    System.out.println("sqrt(10) = "+sqrt(10,0.0001));
+    System.out.println("sqrt(100) = "+sqrt(100,0.0001));
+    //System.out.println("sqrt(0) = "+sqrt(0,0.0001));
+    System.out.println("sqrt(0.0001) = "+sqrt(0.0001,0.0001));
+  }
   /*Recursively find the sqrt using Newton's approximation
    *tolerance is the allowed percent error the squared answer is away from n.
    *precondition: n is non-negative
@@ -13,7 +19,9 @@ public class recursion{
     return sqrtGuess(n,tolerance,1);
   }
   private static double sqrtGuess(double n,double tol,double guess){
-    if(percentError(n,guess) < tol){
+    //System.out.println(guess);
+    //System.out.println(percentError(n,guess*guess));
+    if(percentError(n,guess*guess) < tol){
       //guess is good enough, exit recursive loop
       return guess;
     }else{
@@ -23,7 +31,7 @@ public class recursion{
     }
   }
   private static double percentError(double actual,double experimental){
-    return Math.abs((experimental - actual) / actual) * 100;
+    return Math.abs( (experimental - actual) / actual) * 100;
   }
 
   /*Recursively find the n'th fibbonaci number in linear time
