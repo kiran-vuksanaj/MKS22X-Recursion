@@ -9,6 +9,13 @@ public class recursion{
     System.out.println("sqrt(100) = "+sqrt(100,0.0001));
     System.out.println("sqrt(0) = "+sqrt(0,0.0001));
     System.out.println("sqrt(0.0001) = "+sqrt(0.0001,0.0001));
+    System.out.println("\t///FIB");
+    System.out.println("fib(0) = "+fib(0));
+    System.out.println("fib(1) = "+fib(1));
+    System.out.println("fib(2) = "+fib(2));
+    System.out.println("fib(3) = "+fib(3));
+    System.out.println("fib(10) = "+fib(10));
+    System.out.println("fib(45) = "+fib(45));
   }
   /*Recursively find the sqrt using Newton's approximation
    *tolerance is the allowed percent error the squared answer is away from n.
@@ -41,7 +48,7 @@ public class recursion{
    *precondition: n is non-negative
    */
   public static int fib(int n){
-    return fibStoredVals(n,1,0,1);
+    return fibStoredVals(n,0,1,0);
   }
   private static int fibStoredVals(int endInd,int prevVal,int curVal,int curInd){
     if(curInd == endInd){
