@@ -54,7 +54,7 @@ public class recursion{
    *precondition: n is non-negative
    */
   public static int fib(int n){
-    return fibStoredVals(n,0,1,0);
+    return fibStoredVals(n,1,0,0);
   }
   private static int fibStoredVals(int endInd,int prevVal,int curVal,int curInd){
     if(curInd == endInd){
